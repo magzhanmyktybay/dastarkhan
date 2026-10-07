@@ -10,7 +10,7 @@ Group: SE-2540
 |------|
 | Magzhan Myktybay |
 | Van Alexander |
-| Adilzhan |
+| Adilzhan Kairgaliyev|
 
 ## Description
 
