@@ -30,6 +30,7 @@
           <li><a href="menu.html" class="menu-link active" aria-current="page">Menu</a></li>
           <li><a href="gallery.html" class="menu-link">Gallery</a></li>
           <li><a href="contact.html" class="menu-link">Contact</a></li>
+          <li><a href="register.html" class="menu-link">Join</a></li>
         </ul>
       </nav>
       <a href="contact.html#booking" class="btn btn-gold btn-book">Book a table</a>
@@ -48,15 +49,22 @@
 
     <section class="section" aria-label="Menu by category">
       <div class="container">
-        <nav aria-label="Menu categories">
-          <ul class="menu-categories">
-            <li><a href="#starters">Starters</a></li>
-            <li><a href="#soups">Soups</a></li>
-            <li><a href="#mains">Main dishes</a></li>
-            <li><a href="#desserts">Desserts</a></li>
-            <li><a href="#drinks">Drinks</a></li>
+        <div class="menu-tools" role="search">
+          <label for="menu-search" class="visually-hidden">Search the menu</label>
+          <div class="input-group input-group-lg menu-search">
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
+            <input type="search" id="menu-search" class="form-control" placeholder="Search dishes, e.g. beshbarmak, tea, honey..." autocomplete="off">
+          </div>
+
+          <ul class="menu-categories" aria-label="Filter by category">
+            <li><button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button></li>
+            <li><button type="button" class="filter-btn" data-filter="starters" aria-pressed="false">Starters</button></li>
+            <li><button type="button" class="filter-btn" data-filter="soups" aria-pressed="false">Soups</button></li>
+            <li><button type="button" class="filter-btn" data-filter="mains" aria-pressed="false">Main dishes</button></li>
+            <li><button type="button" class="filter-btn" data-filter="desserts" aria-pressed="false">Desserts</button></li>
+            <li><button type="button" class="filter-btn" data-filter="drinks" aria-pressed="false">Drinks</button></li>
           </ul>
-        </nav>
+        </div>
 
         <section class="menu-block" id="starters" aria-labelledby="starters-title">
           <h2 id="starters-title">Starters</h2>
@@ -354,6 +362,7 @@
             <li><a href="menu.html">Menu</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html">Join the club</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6">
@@ -371,11 +380,14 @@
     <div class="footer-bottom">
       <div class="container d-flex flex-wrap justify-content-between gap-2">
         <p class="mb-0">&copy; 2026 Dastarkhan Restaurant. All rights reserved.</p>
-        <p class="mb-0">Student project, Web Technologies midterm</p>
+        <p class="mb-0">Student project, Web Technologies endterm</p>
       </div>
     </div>
   </footer>
 
   <a href="#top" id="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
