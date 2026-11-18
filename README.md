@@ -32,6 +32,21 @@ For the **endterm** the same site was extended with JavaScript and jQuery: a reg
 
 ## Features implemented
 
+### Final project: jQuery FAQ and API
+
+**jQuery FAQ** (`contact.html`, section *Frequently asked questions*, `js/faq.js`)
+- 6 questions about the restaurant (booking, opening hours, halal, celebrations, kids, allergies)
+- Click on a question opens or closes its answer with jQuery `.slideToggle()` (smooth sliding animation)
+- `+` / `-` indicator changes with the state; `aria-expanded` is updated for screen readers
+- `.stop(true, true)` prevents the indicator going out of sync on fast clicks
+
+**API integration** (`menu.html`, section *Recipe library*, `js/api.js`)
+- Open API: [TheMealDB](https://www.themealdb.com/api.php) (free, no key), data requested with `fetch()` in JSON format
+- Dish cards are built dynamically from the response
+- User interaction: search by name, category filter (the list of categories is also loaded from the API), "Surprise me" random dish, click on a card opens the full recipe (ingredients and method) in a Bootstrap modal
+- Error handling: failed request or bad status shows a message with a "Try again" button; empty result shows a "No dishes found" message; empty search is checked before the request; loading indicator while waiting
+- Text from the API is inserted with `.text()`, not as HTML
+
 ### Endterm: JavaScript and jQuery (`js/script.js`)
 
 **2.1 Form validation** (`register.html`)
@@ -76,7 +91,8 @@ For the **endterm** the same site was extended with JavaScript and jQuery: a reg
 - Bootstrap Icons 1.11.3 via CDN
 - Google Fonts: Marcellus (headings) and Nunito Sans (text)
 - JavaScript (ES5+), all custom code in `js/script.js`
-- jQuery 3.7.1 via CDN (events, DOM manipulation, effects `.fadeIn()`, `.fadeOut()`, `.animate()`)
+- jQuery 3.7.1 via CDN (events, DOM manipulation, effects `.fadeIn()`, `.fadeOut()`, `.animate()`, `.slideToggle()`)
+- TheMealDB public API via `fetch()`
 - Bootstrap 5.3.3 JS bundle via CDN (modal for the CRUD form)
 
 ## Requirements map
@@ -138,7 +154,10 @@ dastarkhan/
 ├── css/
 │   └── style.css
 ├── js/
-│   └── script.js
+│   ├── theme.js
+│   ├── script.js
+│   ├── faq.js
+│   └── api.js
 ├── images/
 │   └── logo.svg
 └── README.md

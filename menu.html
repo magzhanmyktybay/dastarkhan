@@ -339,7 +339,40 @@
         </div>
       </div>
     </section>
+
+    <section class="section" id="recipes" aria-labelledby="recipes-title">
+      <div class="container">
+        <h2 id="recipes-title" class="section-title text-center">Recipe library</h2>
+        <p class="section-intro text-center">Want to cook at home? Search recipes from kitchens around the world. The data comes live from the open TheMealDB API.</p>
+
+        <form id="recipe-form" class="recipe-tools" role="search">
+          <label for="recipe-search" class="visually-hidden">Search recipes by name</label>
+          <input type="search" id="recipe-search" class="form-control" placeholder="Search a dish, e.g. lamb, soup, pie..." autocomplete="off">
+          <label for="recipe-category" class="visually-hidden">Filter by category</label>
+          <select id="recipe-category" class="form-select">
+            <option value="">All categories</option>
+          </select>
+          <button type="submit" class="btn btn-gold"><i class="bi bi-search"></i> Search</button>
+          <button type="button" id="recipe-random" class="btn btn-outline-secondary rounded-pill"><i class="bi bi-shuffle"></i> Surprise me</button>
+        </form>
+
+        <p id="recipe-status" class="recipe-status text-muted" role="status" aria-live="polite"></p>
+        <div id="recipe-grid" class="recipe-grid"></div>
+      </div>
+    </section>
   </main>
+
+  <div class="modal fade" id="recipe-modal" tabindex="-1" aria-labelledby="recipe-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h4" id="recipe-modal-title">Recipe</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="recipe-modal-body"></div>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="container">
@@ -395,5 +428,6 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/api.js"></script>
 </body>
 </html>
