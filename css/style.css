@@ -1506,3 +1506,11 @@ img {
     padding-right: 0;
   }
 }
+
+.ai-acknowledgement {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+  line-height: 1.6;
+}
+
