@@ -102,10 +102,3 @@ In conclusion, our group successfully developed the Dastarkhan restaurant websit
 During this project, we practised working with HTML, CSS, JavaScript, jQuery, and public APIs. We also learned how to work as a team, divide responsibilities, solve programming problems, and create an interactive website.
 
 The project helped us improve our web development skills and understand how different technologies work together.
-
-## 8. Project Links
-
-GitHub Repository: [Insert GitHub Repository Link]
-
-Live Website: https://magzhanmyktybay.github.io/dastarkhan/
-```
