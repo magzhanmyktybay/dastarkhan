@@ -47,11 +47,11 @@ h4 {
 }
 
 a {
-  color: var(--color-pomegranate);
+  color: var(--link-color, var(--color-pomegranate));
 }
 
 a:hover {
-  color: var(--color-night);
+  color: var(--link-hover-color, var(--color-night));
 }
 
 img {
@@ -964,7 +964,6 @@ img {
   border-top: 6px solid var(--color-gold);
 }
 
-/* ---------- Gallery lightbox ---------- */
 .gallery-item img {
   cursor: zoom-in;
 }
@@ -992,7 +991,7 @@ img {
 }
 
 .lightbox-figure img {
-  position: relative;          /* needed for the slide animation */
+  position: relative;
   max-width: 100%;
   max-height: 78vh;
   margin: 0 auto;
@@ -1211,4 +1210,98 @@ img {
   * {
     transition: none !important;
   }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--color-gold);
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--color-gold);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-page: #0E1620;
+  --color-felt: #1C2B39;
+  --color-text: #D8E0E8;
+  --color-muted: #9FAEBC;
+  --link-color: #E58A8A;
+  --link-hover-color: #F1C27A;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4 {
+  color: #F1F4F7;
+}
+
+[data-theme="dark"] .dish-card,
+[data-theme="dark"] .testimonial,
+[data-theme="dark"] .menu-table,
+[data-theme="dark"] .set-card,
+[data-theme="dark"] #booking,
+[data-theme="dark"] .form-card,
+[data-theme="dark"] .crud-wrap,
+[data-theme="dark"] .menu-search .input-group-text {
+  background-color: #16222E;
+}
+
+[data-theme="dark"] .testimonial blockquote,
+[data-theme="dark"] .timeline-year,
+[data-theme="dark"] .dish-name,
+[data-theme="dark"] .crud-table caption,
+[data-theme="dark"] .seating-badge,
+[data-theme="dark"] .menu-search .input-group-text,
+[data-theme="dark"] .menu-categories a,
+[data-theme="dark"] .filter-btn {
+  color: #F1F4F7;
+}
+
+[data-theme="dark"] .menu-categories a,
+[data-theme="dark"] .filter-btn {
+  border-color: #F1F4F7;
+}
+
+[data-theme="dark"] .filter-btn.active {
+  background-color: #D9A441;
+  border-color: #D9A441;
+  color: #0E2236;
+}
+
+[data-theme="dark"] .table {
+  --bs-table-bg: #16222E;
+}
+
+[data-theme="dark"] .menu-table tbody tr:nth-child(even) td {
+  background-color: #1A2937;
+}
+
+[data-theme="dark"] .menu-table tbody tr:hover td {
+  background-color: #2E2A1C;
+}
+
+[data-theme="dark"] .form-check-input:checked {
+  background-color: #D9A441;
+  border-color: #D9A441;
 }
